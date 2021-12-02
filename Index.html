@@ -1,0 +1,273 @@
+<head>
+	<style>
+		body
+		{
+			background-image:url("Image/background.jpg");
+			margin:0px;
+			padding:0px;
+		}
+		
+		aside
+		{
+			width:300px;
+			height:3em;
+			position:fixed;
+			right:0px;
+			bottom:0px;
+			background:blue;
+		}
+		
+		a
+		{
+			color:black;
+			text-decoration:none;
+			font-weight:bold;
+		}
+		
+		Table
+		{
+			border: 3px white groove;
+			margin:1em;
+			background-color:rgba(0,100,250,0.75);
+			border-spacing:10px;
+		}
+		
+		th
+		{
+			font-weight:bold;
+			text-align:center;
+			font-size:20;
+			color:black;
+			font-style:italic;
+		}
+		
+		td
+		{
+			font-size:18;
+			color:red;
+			text-align:right;
+		}
+		
+		td, th
+		{
+			border:2px solid black;
+			padding:20px;
+		}
+	
+		td:nth-child(2)
+		{
+			background-color:gold;
+		}
+	
+		td:last-child
+		{
+			background-color:black;
+		}
+		
+		td:hover, th:hover
+		{
+			background-color:black;
+			color:white;
+		}
+		
+		
+		.grid
+		{
+			display:grid;
+			grid-template-rows:5vh minmax(40px, 10vh);
+			grid-template-columns:repeat(6, 1fr);
+		}
+		
+		nav
+		{
+			color:#447BBE;
+			background-color:red;
+			text-align:center;
+			border-right:.25vw solid black;
+			grid-row:2/3;
+		}
+		
+		#accueil
+		{
+			grid-column:2/3;
+			border-left:.25vw solid black;
+		}	
+		
+		#alt
+		{
+			grid-column:3/4;
+		}	
+		
+		#allies
+		{
+			grid-column:4/5;
+		}	
+		
+		#ennemis
+		{
+			grid-column:5/6;
+		}	
+		
+		@media screen and (max-width:750px)
+		{
+			.grid
+			{				
+				grid-template-columns:repeat(4, 1fr);
+			}
+		
+			#accueil
+			{
+				grid-column:1/2;
+				border-left:.25vw solid black;
+			}	
+			
+			#alt
+			{
+				grid-column:2/3;
+			}	
+			
+			#allies
+			{
+				grid-column:3/4;
+			}	
+			
+			#ennemis
+			{
+				grid-column:4/5;
+			}
+		}
+		
+		@media screen and (max-width:500px)
+		{
+			nav
+			{
+				border:.25vw solid black;
+			}
+			.grid
+			{				
+				grid-template-columns:1fr;
+				grid-template-rows:repeat(4, minmax(40px, 10vh));
+			}
+		
+			#accueil
+			{
+				grid-row:1/2;
+				grid-column:1/2;
+				border-left:.25vw solid black;
+			}	
+			
+			#alt
+			{
+				grid-row:2/3;
+				grid-column:1/2;
+			}	
+			
+			#allies
+			{
+				grid-row:3/4;
+				grid-column:1/2;
+			}	
+			
+			#ennemis
+			{
+				grid-row:4/5;
+				grid-column:1/2;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<nav id="accueil">
+				Accueil
+		</nav>
+		<nav id="alt">
+				Version Alternative
+		</nav>
+		<nav id="allies">
+				Alliés
+		</nav>
+		<nav id="ennemis">
+				Ennemies
+		</nav>
+	</div>
+	<table>
+		<tr>
+			<th colspan="5">
+				Spiderman Alternatif
+			</th>
+		</tr>
+		<tr>
+			<th >
+				Spiderverse
+			</th>
+			<td >
+				Original
+			</td>
+			<td >
+				Supérieur
+			</td>
+			<td >
+				Earth-8311
+			</td>
+			<td >
+				Earth-2149
+			</td>
+		</tr>
+		<tr>
+			<th >
+				Héros
+			</th>
+			<td >
+				Spider-man (Peter Parker)
+			</td>
+			<td >
+				Superior Spider-Man (Otto Octavius)
+			</td>
+			<td >
+				Spider-Ham (Peter Porker)
+			</td>
+			<td >
+				Zombie Spider-man
+			</td>
+		</tr>
+		<tr>
+			<th >
+				Ennemi
+			</th>
+			<td >
+				Green Gobelin
+			</td>
+			<td >
+				The Avenger
+			</td>
+			<td >
+				Ducktor Doom
+			</td>
+			<td >
+				Tous les non-Zombies
+			</td>
+		</tr>
+		<tr>
+			<th >
+				Image
+			</th>
+			<td >
+				<img src="Image/original.jpg" width="200" height="150" >
+			</td>
+			<td >
+				<img src="Image/Superior.jpg" width="200" height="150" >
+			</td>
+			<td >
+				<img src="Image/SpiderHam.jpg" width="200" height="150" >
+			</td>
+			<td >
+				<img src="Image/Zombie.jpg" width="200" height="150" >
+			</td>
+		</tr>
+	</table>
+	
+	<aside>
+		Spider-man valide son code sur <a href="http://validator.w3.org/">VALIDATOR.W3.ORG</a>
+	</aside>
+</body>
